@@ -1,0 +1,2 @@
+host,min_free_mem_percentage,max_free_mem_percentage,avg_free_mem_percentage
+host5,85.92,87.47,86.84249999999999
