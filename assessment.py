@@ -108,8 +108,14 @@ class ETLHostMemoryAggregator:
                                     from {} 
                                 """.format(self.table_name))
         if format.lower()=="json":
-            df.write.mode("overwrite").json("{}/output/aggacrosshost.json".format(self.base_path))
+            df.write.mode("overwrite") \
+                .option("header", "true") \
+                .json("{}/output/aggacrosshost.json".format(self.base_path))
         elif format.lower()=="parquet":
-            df.write.mode("overwrite").parquet("{}/output/aggacrosshost.parquet".format(self.base_path))
+            df.write.mode("overwrite") \
+                .option("header", "true") \
+                .parquet("{}/output/aggacrosshost.parquet".format(self.base_path))
         elif format.lower()=="csv":
-            df.write.mode("overwrite").csv("{}/output/aggacrosshost.csv".format(self.base_path))
+            df.write.mode("overwrite") \
+                .option("header", "true") \
+                .csv("{}/output/aggacrosshost.csv".format(self.base_path))

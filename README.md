@@ -32,6 +32,15 @@ cd <local_git_repo_path>
 python -m unittest tests/test_assessment.py 
 ```
 
+###  Sample output
+Agg per host
+
+![img.png](img.png)
+
+Agg across hosts
+
+![img_1.png](img_1.png)
+
 ###  Out of scope
 Parameterization using confile file 
    * All hardcoded values must be passed through the config file i.e. source, target, file path, etc.
